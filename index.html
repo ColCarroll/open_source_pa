@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Two Years of Open Source</title>
+<meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.3/tufte.min.css" />
+<style>
+
+  td {
+    vertical-align: top;
+    padding: 20px;
+  }
+  #main {
+    text-align:left;
+  }
+  code {
+    background-color:#EEEEEE;
+    font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+  }
+  i {
+    font-family: "Times New Roman", Times, serif;
+  }
+  img {
+    border:4px solid #196786;
+    width:300px;
+    height:225px;
+    max-width: none;
+  }
+  .logo {
+    border: none;
+    width: auto;
+    height: 4em;
+    margin-top: 3em;
+  }
+  a.toc {
+    text-decoration:none;
+    color: inherit;
+  }
+  hr {
+    border:2px solid #196786;
+  }
+  p, table {
+    width: 80%; 
+  }
+  </style>
+</head>
+
+<body>
+<div id="main">
+
+<div style="display: inline-block">
+  <img src="git.png" class=logo style="float: left"></img>
+  <h1 style="float: right;">Two Years of Open Source</h1>
+</div>
+<p class="subtitle">Dr. Colin Carroll</p>
+<h3><small>January 12, 2018</small></h3>
+
+  <p>These are the slides from a presentation I gave in <a href="https://twitter.com/nicholaszufelt">Dr. Nick Zufelt</a>'s course <a href="https://nzufelt.github.io/open_source_movement_csc630/">The Open Source Movement</a> at Phillips Academy, Andover. It was a wonderful experience, and the students had some pretty incredible and mature questions after the talk (examples: "Why is theano shutting down?", "How is calculus used in computer science?", "How has your doctorate helped in industry?")
+
+  <p>Two students in the course also became contributors to PyMC3 that same day by submitting pull requests which were subsequently merged.
+
+<hr/>
+
+<table cellspacing=10>
+	<tr>
+	  <td colspan="2">
+		<ol>
+		  <li><a href="#introduction">Introduction</a></li>
+		  <li><a href="#gettingStarted">Getting into Open Source</a></li>
+		  <li><a href="#maintaining">Maintaining an Open Source Project</a></li>
+		  <li><a href="#privilege">Privilege in Open Source</a></li>
+		</ol>
+	  </td>
+	</tr>
+
+	<tr>
+	  <td colspan="2">
+		<div style="display: inline-block">
+		  <a name="introduction" class=toc href="#introduction">
+			<img src="git.png" class=logo style="float: left"></img>
+			<h1 style="float: right;">Introduction</h1>
+		  </a>
+		</div>
+		<hr/>
+	  </td>
+	</tr>
+
+	<tr>
+		<td>
+		  <a href="images/open_source.002.jpeg">
+			<img src="thumbs/open_source.002.jpeg">
+		  </a>
+		</td>
+
+		<td> 
+			<p>This is a strange talk for me to give, so apologies if it is a little awkward. I am not sure the last time I gave a talk without assuming the audience had a background in calculus and linear algebra, so it is like the audience and I are working together, and I am just helping them up the mountain.
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		  <a href="images/open_source.003.jpeg">
+			<img src="thumbs/open_source.003.jpeg">
+		  </a>
+		</td>
+
+		<td>
+			<p>This is not normal, by the way. Lots of technical talks are funny and engaging without any math, but that is sort of like taking the train up Mount Washington. It leaves you feeling empty.  
+
+			<p>Specifically, a lot of what I will cover is quite personal. I will be telling some anecdotes, and giving some general thoughts on open source. I have made a number of friends while doing open source work, and one thing I love about the community is that everyone is there for their own reasons, and everyone is a volunteer. Just like I cannot tell them to do something (and they cannot tell me to do something), I cannot speak for their priorities, but I would like to share some of my own thoughts.
+
+		</td>
+	</tr>
+
+	<tr>
+	  <td colspan="2">
+		<div style="display: inline-block">
+		  <a name="gettingStarted" class=toc href="#gettingStarted">
+			<img src="git.png" class=logo style="float: left"></img>
+			<h1 style="float: right;">Getting into Open Source</h1>
+		  </a>
+		</div>
+		<hr/>
+	  </td>
+	</tr>
+
+	<tr>
+		<td>
+		  <a href="images/open_source.004.jpeg">
+			<img src="thumbs/open_source.004.jpeg">
+		  </a>
+		</td>
+
+		<td>
+            <p>My own background is vaguely relevant here, then. I studied math and economics at Williams College. While I was there, I took a single course in computer science, which ended up being the lowest grade on my transcript. This is not bragging about my grades in other courses, it is really damning of my performance in that course. The course was based on Java, a language that I remain incapable of looking at without getting flashbacks.
+
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		  <a href="images/open_source.005.jpeg">
+			<img src="thumbs/open_source.005.jpeg">
+		  </a>
+		</td>
+
+		<td>
+            <p>To give you a scale of time, it was not that long ago, but a website called “thefacebook.com" expanded to Williams my sophomore year, and managed to kill the paper "face book" (containing photos, names, hometowns, and landline phone extensions) that was distributed by the start of my senior year.
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		  <a href="images/open_source.006.jpeg">
+			<img src="thumbs/open_source.006.jpeg">
+		  </a>
+		</td>
+
+		<td>
+            <p>After graduating, I went to Rice University in Houston, Texas to study pure math, which is distinguished from applied math in that you do not get to use a computer.
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		  <a href="images/open_source.007.jpeg">
+			<img src="thumbs/open_source.007.jpeg">
+		  </a>
+		</td>
+
+		<td>
+            <p>That is almost true! There is a lot of interesting work being done in pure math now with computers, and I wish I had known more about them then to help make conjectures and build intuition. 
+            <p>It is incredible to me some theorems that were proven without computers. A favorite of mine is up here. This is the converse to <a href="https://en.wikipedia.org/wiki/Fermat%27s_little_theorem">Fermat's Little Theorem</a>, and it is false (the theorem itself is true: if <code>p</code> is prime, the remainder will be 2). I leave it as an exercise to the reader to find the smallest number where it isn’t true, but let you know that the number is over 100.
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		  <a href="images/open_source.008.jpeg">
+			<img src="thumbs/open_source.008.jpeg">
+		  </a>
+		</td>
+
+		<td>
+            <p>I spent a summer during grad school in Park City studying image processing and learning to use MATLAB. Oddly, I was taught by Yann LeCun, who now leads Facebook's AI division and is A Super Big Deal. This was a year or two before deep learning caught on big, so he was still running workshops for grad students. I will say that Park City is a wonderful place to spend a summer, and you could do worse than choose a subject to study based on what is being hosted by the <a href="https://pcmi.ias.edu/">Park City Math Institute</a>.
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		  <a href="images/open_source.009.jpeg">
+			<img src="thumbs/open_source.009.jpeg">
+		  </a>
+		</td>
+
+		<td>
+            <p>This was enough to get me interested in programming, and I started using MATLAB, and then Python, to solve <a href="https://projecteuler.net/">Project Euler</a> problems as a hobby. This is a wonderful website with recreational math challenges that often require a computer to solve. I also started to and to assign programming challenges to students in my linear algebra courses. This is an example of a real bonus question that was given to sophomores and juniors at Rice University.
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+        <img src="http://giant.gfycat.com/TenseSkinnyIndianrhinoceros.gif">
+		</td>
+
+		<td>
+            <p>After graduating, I was hired by a startup trying to build a data science team who did not know that they could do better than me. They were a Ruby on Rails shop, but data science was then, and is now, often done with Python and R, so I had two fairly insulated years to learn more about Python, R, and machine learning.
+            <p>In addition to more serious work, a group of us also got to launch the company mascot part of the way to space on a weather balloon.
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		  <a href="images/open_source.010.jpeg">
+			<img src="thumbs/open_source.010.jpeg">
+		  </a>
+		</td>
+
+		<td>
+            <p>My first repository on GitHub was from around then. A few friends and I decided to learn git and C++ at the same time. This is not a great idea! We succeeded in demonstrating that five scientists – including Dr. Z (<em>Ed.: course instructor</em>), Dr. K (<em>Ed.: department chair, in attendance</em>), and me – could not figure out how either git or C++ worked. 
+
+            <p>In any case, we moved up to Andover, I got another job more focused on engineering, and started taking the train, 40 minutes each way, from Andover to Boston
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		  <a href="images/open_source.011.jpeg">
+			<img src="thumbs/open_source.011.jpeg">
+		  </a>
+		</td>
+
+		<td>
+            <p>This train is how I got involved in open source software. The internet on the ride is terrible, which means I have more than an hour each day to do focused work on a project of my choice. While trying to learn more statistics, I cloned the PyMC3 project, became frustrated that the tests would not run, fixed it and sent off a pull request. The maintainers were friendly and prompt, and helped to merge a number of more nitpicky changes before inviting me to join the core team. 
+		</td>
+	</tr>
+
+	<tr>
+	  <td colspan="2">
+		<div style="display: inline-block">
+		  <a name="maintaining" class=toc href="#maintaining">
+			<img src="git.png" class=logo style="float: left"></img>
+			<h1 style="float: right;">Maintaining an Open Source Project</h1>
+		  </a>
+		</div>
+		<hr/>
+	  </td>
+	</tr>
+
+	<tr>
+		<td>
+		  <a href="images/open_source.013.jpeg">
+			<img src="thumbs/open_source.013.jpeg">
+		  </a>
+		</td>
+
+		<td>
+            <p>Now I want to talk a little about what it actually looks like to be a maintainer of an open source project. First I should mention for context why I am focusing on PyMC3.
+            <p>I have over 100 repositories on Github. They are all technically open source, but wildly unpopular. I have that many because it is free to make a repository, they are extremely portable if github ever displeases me, and I find them useful to organize and back up code that I write. 
+            <p>The reason I focus on PyMC3 today is that it is open source and fairly popular. You can read a lot into the project here. There are lots of stars, and lots of people watching the project. You can see a change was merged yesterday, meaning it is quite active. There are 226 issues, and 30 open pull requests. Somewhat counter-intuitively, lots of issues are typically a good thing, though we work hard to keep both those numbers low. People stop knocking if no one is home, but report issues if they expect to get a response, and want to use the software.
+            <p>The number I am most proud of is the 144 contributors. I will talk more about community at the close of the talk. 
+            <p>Probably the best indicator of the popularity of the project is that we have stickers. I will be providing some extras to Dr. Z in exchange for pull requests (<em>Ed.: <a href="https://colindcarroll.com/#contact">Contact me</a> if you have contributed and would like stickers</em>).
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		  <a href="images/open_source.014.jpeg">
+			<img src="thumbs/open_source.014.jpeg">
+		  </a>
+		</td>
+
+		<td>
+            <p>What does being a core contributor mean in practice? Mechanically, all it means is that I have the ability to unilaterally add or remove code from the project: I can merge pull requests. In practice, it means that I get a slightly louder voice on issues.  
+
+            <p>Following the <a href="http://www.artima.com/weblogs/viewpost.jsp?thread=235725">Python programming language</a>The “benevolent dictator” of PyMC3 is a professor of biostatistics at Vanderbilt who gets last say, though he has never used it in the two years I have been participating. Two other contributors get paid time from their company to work on the project, though both were active before starting at the company. The company, <a href="https://www.quantopian.com/">Quantopian</a>, is located in Boston, but they live in different places in Germany.  Me and one other contributor do it to stay sharp with math, and the rest are academics using it for their research. Some notable ones live in Moscow, Tokyo, Sao Paolo, Portland, Oregon, and Fribourg, Switzerland.
+
+            <p>We meet once a month for an hour to discuss the direction of the project, and coordinate releases. We also meet once a month for a "journal club", where we read and discuss academic papers relevant to the project. We actually rescheduled this week's journal club so I could be here instead!
+
+            <p>Most important, though, is that we help contributors add code, while encouraging community and use of the library. This involves reading and discussing <a href="https://github.com/pymc-devs/pymc3">code on Github</a>, talking over usage problems on <a href="https://discourse.pymc.io/">a message board we made</a> and <a href="https://stackoverflow.com/questions/tagged/pymc3">Stack Overflow</a>, and giving talks and workshops     around the country.
+
+            <p>I want to go over a few examples of open source interactions I have had that stick out in my mind, to give you a taste for what it feels like.
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		  <a href="images/open_source.015.jpeg">
+			<img src="thumbs/open_source.015.jpeg">
+		  </a>
+		</td>
+
+		<td>
+            <p><a href="https://summerofcode.withgoogle.com/">Google runs a program</a> to support Open Source, where PyMC3 applied to participate, and then undergraduates around the world apply to do work on PyMC3 during the summer. Bill was one such student funded last summer by Google, and implemented something called Gaussian Processes for us. He has kept up participation, fixing issues related to Gaussian processes, and joined the team. 
+            <p>I liked this exchange - he had fixed a subtle bug that I could not spot, and did not know whether to merge without permission. This highlights a continuing theme, which is that I, as a maintainer, do not know what I am doing. We are learning on the job, where by "job", I mean "unpaid hobby".
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+          <a href="https://xkcd.com/1172/">
+			<img src="thumbs/open_source.016.jpeg">
+		  </a>
+		</td>
+
+		<td>
+            <p>This comic happened to us. PyMC3 is, in a very simplified way, a random sampling library. It is surprisingly important when randomly sampling to be able to reproduce results: to get the <em>same</em> random numbers if you would like to. This enables you to, for example, run the same code on different computers and get the exact same results.
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		  <a href="images/open_source.017.jpeg">
+			<img src="thumbs/open_source.017.jpeg">
+		  </a>
+		</td>
+
+		<td>
+            <p>I made some changes that made getting reproducible random numbers more consistent in all cases, and possible in other cases. Shortly afterwards we got the issue here.
+            <p>This made me feel terrible. Continuing the theme of not knowing what I am doing, this was a learning experience for me, in that a small bug fix we had made to allow reproducible random samples broke his script. We have gotten a lot more disciplined about release notes, and using versioning to indicate breaking changes. This is not something I worry about on my personal projects, since they are used only by me, but causes problems when you have users.
+            <p>I will say that this user is being a good open source citizen. We have had uniformly polite users – I looked for an example of someone being rude, or not respecting that we were volunteers, but I have none. I know they exist, but not on our project.
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		  <a href="images/open_source.018.jpeg">
+			<img src="thumbs/open_source.018.jpeg">
+		  </a>
+		</td>
+
+		<td>
+            <p>This made me feel great, though. Jake Vanderplas, an astronomer at the University of Washington, gave the keynote at the big national Python conference last year. Thousands of geeks gather together once a year, and in 2017 they gave the spotlight to Jake, who highlighted the scientific Python ecosystem. He mentioned PyMC3 as being important to the scientific Python landscape, which was incredible, and great recognition, but used our old logo, because our current logo did not have a transparent background.
+            <p> Take a look also at the date on this screenshot. He actually gave this talk around lunchtime on May 19.
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		  <a href="images/open_source.019.jpeg">
+			<img src="thumbs/open_source.019.jpeg">
+		  </a>
+		</td>
+
+		<td>
+            <p>Later that same afternoon, we got a pull request from Jake, the keynote speaker at the national conference, where he had fixed our logo and given it a transparent background. I thought this was just the coolest.
+		</td>
+	</tr>
+
+	<tr>
+	  <td colspan="2">
+		<div style="display: inline-block">
+		  <a name="privilege" class=toc href="#privilege">
+			<img src="git.png" class=logo style="float: left"></img>
+			<h1 style="float: right;">Privilege in Open Source</h1>
+		  </a>
+		</div>
+		<hr/>
+	  </td>
+	</tr>
+
+	<tr>
+		<td>
+		  <a href="images/open_source.020.jpeg">
+			<img src="thumbs/open_source.020.jpeg">
+		  </a>
+		</td>
+
+		<td>
+            <p>There is a problem of privilege in open source. I am able to participate in open source work in part because, so far, my employers have allowed me to, but also because I have an extremely privileged background. I finished college without debt, which allowed me to spend five years in a graduate program where they actually paid me. Not a lot at all, but enough to survive. This allowed me to get an advanced degree in a field that was just taking off among employers.
+
+            <p>I am mostly skipping over corporate responsibility for contributing back to the libraries they use, but I will reiterate that there are good corporate citizens: as I mentioned, two other members of the PyMC3 team are paid by their employer to work on the library. This company has a particularly liberal open source policy. Conversely, a friend of mine who works for Apple may get in trouble for contributing to open source in his free time. It seems as though the former attitude is becoming more popular, though that is only my anecdotal observation.
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		  <a href="images/open_source.021.jpeg">
+			<img src="thumbs/open_source.021.jpeg">
+		  </a>
+		</td>
+
+		<td>
+            <p>At every company I have worked at, we have mentioned in job advertisements that we value open source contributions, and request links to applicants' GitHub accounts.
+
+            <p>This is understandable! It is an easy way to compare candidates, in that we may review their code before flying them in to interview. 
+
+            <p>Why is this a problem?  
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		  <a href="images/open_source.022.jpeg">
+			<img src="thumbs/open_source.022.jpeg">
+		  </a>
+		</td>
+
+		<td>
+            <p>At the <a href="https://civic.mit.edu/">Center for Civic Media</a>, my current workplace, we are encouraged to think about who is harmed by policies.
+
+            <p>In this case, we are hurting those who have not been financially comfortable enough to give their time away for free. We also hurt those who choose to give their time to causes that are not their job. Candidates with families, candidates who work for companies with more restrictive policies, candidates with hobbies which are not writing code, candidates from non-traditional backgrounds.
+
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		  <a href="images/open_source.014.jpeg">
+			<img src="thumbs/open_source.014.jpeg">
+		  </a>
+		</td>
+
+		<td>
+            <p>Note that many of the candidates who are hurt while favoring open source are also the candidates who are traditionally discriminated against. I do not know or offer an answer to this problem. Given two candidates, one of whom has a github account, and the other who is an amateur astronomer, I would love to say it would be a hard choice between the two, but it just would not be.
+
+            <p>I bring this up to say it is a problem that the tech community is dealing with right now. We discuss in our monthly lab meetings how to do more outreach to get specifically more women involved in the project. Every applicant for the summer scholarship last year was male, and I think that is a profound failure on our part.
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		  <a href="images/open_source.023.jpeg">
+			<img src="thumbs/open_source.023.jpeg">
+		  </a>
+		</td>
+
+		<td>
+            <p>Open source is interesting, and a bit of an adventure! Working on a large project is not a great way to be innovative, and it is a not super lucrative. It has been a great way to meet a lot of people, and to learn from tons of smart programmers and scientists. Part of why it feels like an adventure is that I did not, and still do not, know what I am doing. This has serious repercussions with respect to diversity and includion, as I was just pointing out, and it has more harmless repercussions, like breaking a script by failing to version properly.
+
+            <p>There is an effort now to get more people from different backgrounds, including high school and college students, involved in open source, and I would encourage you to find one or many welcoming projects to work with. Proof-reading the documentation in PyMC3 is a good and easy choice for starting!
+
+            <p>Thanks so much for your time.
+		</td>
+	</tr>
+
+</table>
+
+</div>
+
+</body>
+</html>
